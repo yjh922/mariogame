@@ -18,6 +18,11 @@
     </style>
     <script src="./GameObject.js"></script>
     <script src="./Brick.js"></script>
+    <script src="./Sensor.js"></script>
+    <script src="./LeftSensor.js"></script>
+    <script src="./RightSensor.js"></script>
+    <script src="./TopSensor.js"></script>
+    <script src="./BottomSensor.js"></script>
     <script src="./Mario.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="../js/lib.js"></script>
@@ -50,7 +55,12 @@
         }
         
         function jump(){
-            mario.velY=-4;
+            //마리오의 발바닥이 땅에 닿을때만 점프허용
+            if(mario.falled){
+                mario.velY=-4;
+            }
+            //발바닥이 공중으로 떠 있다. 따라서 falled=false이다.
+            mario.falled=false;
         }
 
         function moveX(n){
