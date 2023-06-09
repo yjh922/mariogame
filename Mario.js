@@ -8,10 +8,10 @@ class Mario extends GameObject{
         this.falled=false;
 
         //Has a 관계 Mario has a Sensor
-        this.leftSensor=new LeftSensor(this.container,3,50,this.x-3,this.y+10,"red");
-        this.rightSensor=new RightSensor(this.container,3,50,this.x+this.width,this.y+10,"red");
-        this.topSensor=new TopSensor(this.container,40,3,this.x+5,this.y-3,"red");
-        this.bottomSensor=new BottomSensor(this.container,40,3,this.x+5,this.y+this.height,"red");
+        this.leftSensor=new LeftSensor(this.container,3,50,this.x-3,this.y+10,"blue");
+        this.rightSensor=new RightSensor(this.container,3,50,this.x+this.width,this.y+10,"blue");
+        this.topSensor=new TopSensor(this.container,40,3,this.x+5,this.y-3,"blue");
+        this.bottomSensor=new BottomSensor(this.container,40,3,this.x+5,this.y+this.height,"blue");
     }
 
     hitCheck(){
